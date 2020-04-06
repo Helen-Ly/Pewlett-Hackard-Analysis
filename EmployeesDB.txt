@@ -1,0 +1,41 @@
+Departments
+- 
+dept_no vachar pk
+dept_name vachar
+
+Employees
+-
+emp_no int pk
+birth_date date
+first_name vachar
+last_name vachar
+gender vachar
+hire_date date
+
+Dept_Emp
+-
+emp_no int pk fk >- Employees.emp_no
+dept_no vachar fk >- Departments.dept_no
+from_date date
+to_date date
+
+Managers
+-
+dept_no vachar pk fk - Departments.dept_no
+emp_no int fk - Employees.emp_no
+from_date date
+to_date date
+
+Salaries
+-
+emp_no int pk fk - Employees.emp_no
+salary int
+from_date date
+to_date date
+
+Titles
+-
+emp_no int pk fk >- Employees.emp_no
+title vachar
+from_date date
+to_date date
